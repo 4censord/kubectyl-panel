@@ -2,13 +2,15 @@
 
 namespace Kubectyl\Http\Controllers\Base;
 
-use Illuminate\Contracts\Translation\Loader;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Translation\Translator;
 use Kubectyl\Http\Controllers\Controller;
+use Illuminate\Contracts\Translation\Loader;
 use Kubectyl\Http\Requests\Base\LocaleRequest;
 
+
 class LocaleController extends Controller
+
 {
     protected Loader $loader;
 
