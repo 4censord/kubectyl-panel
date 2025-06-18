@@ -8,9 +8,7 @@ use Kubectyl\Http\Controllers\Controller;
 use Illuminate\Contracts\Translation\Loader;
 use Kubectyl\Http\Requests\Base\LocaleRequest;
 
-
 class LocaleController extends Controller
-
 {
     protected Loader $loader;
 
