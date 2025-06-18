@@ -8,7 +8,7 @@ on:
 jobs:
   release:
     name: Release
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-24.04
     steps:
       - name: Code checkout
         uses: actions/checkout@v3
@@ -30,8 +30,8 @@ jobs:
           REF: ${{ github.ref }}
         run: |
           BRANCH=release/${REF:10}
-          git config --local user.email "ci@kubectyl.org"
-          git config --local user.name "Kubectyl CI"
+          git config --local user.email "ci@4censord.cloud"
+          git config --local user.name "4censord CI"
           git checkout -b $BRANCH
           git push -u origin $BRANCH
           sed -i "s/    'version' => 'canary',/    'version' => '${REF:11}',/" config/app.php
